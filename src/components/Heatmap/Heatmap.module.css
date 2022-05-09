@@ -1,0 +1,50 @@
+.heatmap {
+    margin: 15px 0px
+}
+
+table {
+    border-collapse: collapse !important;
+}
+
+.table thead th {
+    background-color: #ca5405;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    color: whitesmoke;
+    width: 60px;
+}
+
+.table tbody th {
+    background-color: #000000c8;
+    color: whitesmoke;
+}
+
+.table td {
+    border: 0.5px solid #ddd;
+}
+
+.table td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+
+.emptyCell {
+    border-left: 0px none #ddd !important;
+    background-color: transparent !important;
+}
+
+
+.legend {
+    margin: 0.5rem;
+}
+
+.legend svg {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.heatmap p {
+    margin: 0.5rem;
+}
