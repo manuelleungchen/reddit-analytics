@@ -3,7 +3,6 @@ import styles from './App.module.css';
 
 // Importing App Components
 import Header from './components/Header/Header';
-import Button from './components/Button/Button';
 import SearchBar from './components/SearchBar/SearchBar';
 import Heatmap from './components/Heatmap/Heatmap';
 import Postslist from './components/Postslist/Postslist';
@@ -18,7 +17,6 @@ function App() {
                     <h2>Find the best time for a subreddit</h2>
 
                     <SearchBar />
-                    <Button />
                     <Heatmap />
                     <Postslist />
                 </section>
