@@ -6,8 +6,8 @@ import Post from '../Post/Post';
 
 function Postslist() {
   return (
-    <section>
-      <p>Posts</p>
+    <section className={styles.postslist}>
+      <h3>Posts</h3>
       <table>
         <thead>
           <tr>

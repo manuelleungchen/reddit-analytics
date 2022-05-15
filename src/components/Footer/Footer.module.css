@@ -1,0 +1,51 @@
+.footer {
+    background-color: #ffc299;
+    color: #ff8737;
+    text-align: center;
+    padding: 0.5em;
+    font-size: large;
+}
+
+.footer ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 0.5em auto;
+}
+.footer ul a {
+    color: #ff8737;
+    font-size: 35px;
+}
+
+.srOnly {
+    position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; 
+}
+
+/* portrait tablets styles */
+@media screen and (min-width: 768px) {
+    .footer ul {
+        width: 60%;
+    }
+}
+
+/* laptops styles */
+@media screen and (min-width: 920px) {
+    .footer ul {
+        width: 40%;
+    }
+}
+
+/* large devices styles */
+@media screen and (min-width: 1200px) {
+    .footer ul {
+        width: 30%;
+    }
+}

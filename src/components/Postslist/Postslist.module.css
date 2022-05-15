@@ -1,0 +1,28 @@
+.postslist {
+    width: 96%;
+    margin: 1em auto;
+    padding: 1em;
+    border: 2px solid #ca5405;
+    border-radius: 1.5em;
+}
+
+/* landscape phones styles */
+@media screen and (min-width: 576px) {
+    .postslist {
+        width: 85%;
+    }
+}
+
+/* laptops styles */
+@media screen and (min-width: 920px) {
+    .postslist {
+        width: 80%;
+    }
+}
+
+/* large devices styles */
+@media screen and (min-width: 1200px) {
+    .postslist {
+        width: 70%;
+    }
+}

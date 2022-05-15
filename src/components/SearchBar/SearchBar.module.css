@@ -2,13 +2,13 @@
 
 .searchbar {
     background-color: #c5733c;
-    width: 300px;
+    width: 85%;
     height: 44px;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 10px;
+    margin: 1em auto;
   }
 
   .searchbar input {
@@ -39,3 +39,31 @@
     height: 34px;
     padding: 5px;
   }
+
+  /* landscape phones styles */
+@media screen and (min-width: 576px) {
+    .searchbar {
+        width: 70%;
+    }
+}
+
+/* portrait tablets styles */
+@media screen and (min-width: 768px) {
+    .searchbar {
+        width: 60%;
+    }
+}
+
+/* laptops styles */
+@media screen and (min-width: 920px) {
+    .searchbar {
+        width: 50%;
+    }
+}
+
+/* large devices styles */
+@media screen and (min-width: 1200px) {
+    .searchbar {
+        width: 40%;
+    }
+}
