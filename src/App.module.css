@@ -5,8 +5,55 @@
   }
 
 .container {
-    max-width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 1rem;
+    width: 96%;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container h2 {
+    text-align: center;
+    color: #a0511c;
+}
+
+.section {
+    width: 96%;
+    margin: 1em auto;
+    padding: 1em;
+    border: 2px solid #a0511c;
+    border-radius: 1.5em;
+}
+
+.section ul {
+    margin-left: 25px;
+}
+
+/* landscape phones styles */
+@media screen and (min-width: 576px) {
+    .container {
+        width: 90%;
+    }
+    .section {
+        width: 85%;
+    }
+}
+
+/* laptops styles */
+@media screen and (min-width: 920px) {
+    .container {
+        width: 85%;
+    }
+    .section {
+        width: 80%;
+    }
+}
+
+/* large devices styles */
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 80%;
+    }
+    .section {
+        width: 70%;
+    }
 }

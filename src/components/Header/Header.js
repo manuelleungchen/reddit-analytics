@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Header.module.css';
 
+import logo from '../../assets/images/reddit-analytics-logo.png';
+
 import { useState } from "react";
 
 function Header() {
@@ -12,7 +14,8 @@ function Header() {
         <header>
             <nav className={styles.navigation}>
                 <a href="#" className={styles.brandName}>
-                    Reddit Analytics
+                    <img src={logo} alt="Reddit Analytics Logo" />
+                    <h1>Reddit Analytics</h1>
                 </a>
                 <button
                     className={styles.hamburger}
