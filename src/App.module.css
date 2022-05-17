@@ -13,14 +13,14 @@
 
 .container h2 {
     text-align: center;
-    color: #a0511c;
+    color: #ff8737;
 }
 
 .section {
     width: 96%;
     margin: 1em auto;
     padding: 1em;
-    border: 2px solid #a0511c;
+    border: 2px solid #f97924;
     border-radius: 1.5em;
 }
 

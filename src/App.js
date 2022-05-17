@@ -17,7 +17,7 @@ function App() {
                     <h2>Find the best time for a subreddit</h2>
 
                     <SearchBar />
-                    <Heatmap />
+                    {/* <Heatmap /> */}
                     <Postslist />
                 </section>
                 <section className={styles.section} id='howItWorks'>
