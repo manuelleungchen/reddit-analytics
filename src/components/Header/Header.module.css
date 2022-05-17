@@ -5,18 +5,16 @@
     align-items: center;
     position: relative;
     padding: 0.5em 0em;
-    background-color: #ff8737;
-    box-shadow: 0 2px 2px 2px #ff6a06;
+    background-color: #ffc299;
 }
 
 .navigation a {
-    color: whitesmoke;
+    color: #ff8737;
     font-weight: bolder;
 }
 
 .brandName {
     text-decoration: none;
-    color: black;
     margin: 0.5em 1em;
     display: flex;
     align-items: center;
@@ -45,13 +43,13 @@
     text-decoration: none;
     display: block;
     width: 100%;
-    padding: 1.3em;
+    padding: 0.5em;
     margin: 0px;
-    color: whitesmoke;
+    color: #ff8737;
 }
 
 .navigationMenu li:hover {
-    background-color: #ff6a06;
+    border-bottom: 2px solid #ff8737;
 }
 
 .hamburger {
@@ -61,7 +59,7 @@
     width: 40px;
     padding: 0.5em;
     border-radius: 50%;
-    background-color: #ff6a06;
+    background-color: #ff8737;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
     /* positions the icon to the right and center aligns it vertically */
@@ -73,7 +71,7 @@
 }
 
 .hamburger:hover {
-    background-color: #a0511c;
+    background-color: #f97924;
 }
 
 @media screen and (max-width: 768px) {
@@ -88,11 +86,11 @@
         left: 0;
         /* stacks the li tags vertically  */
         flex-direction: column;
+        justify-content: center;
         /* makes menu span full height and width */
         width: 100%;
         height: calc(100vh - 60px);
         background-color: #ffc299;
-        border-top: 1px solid black;
         display: none;
     }
 
@@ -106,14 +104,15 @@
         color: whitesmoke;
         /* increases the surface area of the anchor tag to span the full width of the menu */
         width: 100%;
-        padding: 1.5em 0;
+        padding: 1.2em 0;
+        font-size: 1.3em;
     }
 
     .navigationMenu li:hover {
-        background-color: #a0511c;
+        background-color: #ff8737;
     }
 
     .expanded ul {
-        display: block;
+        display: flex;
     }
 }
