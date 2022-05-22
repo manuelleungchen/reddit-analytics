@@ -13,10 +13,10 @@ function Header() {
     return (
         <header>
             <nav className={styles.navigation}>
-                <a href="#" className={styles.brandName}>
+                <div className={styles.brandName}>
                     <img src={logo} alt="Reddit Analytics Logo" />
                     <h1>Reddit Analytics</h1>
-                </a>
+                </div>
                 <button
                     className={styles.hamburger}
                     onClick={toggleIsNavExpanded}

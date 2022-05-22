@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import styles from './App.module.css';
 
 // Importing App Components
 import Header from './components/Header/Header';
 import SearchBar from './components/SearchBar/SearchBar';
-import Heatmap from './components/Heatmap/Heatmap';
+// import Heatmap from './components/Heatmap/Heatmap';
 import Postslist from './components/Postslist/Postslist';
 import Footer from './components/Footer/Footer';
 
