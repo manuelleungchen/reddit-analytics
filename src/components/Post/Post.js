@@ -1,15 +1,16 @@
 import React from 'react';
-// import styles from './sPost.module.css';
 
-function Post() {
-  return (
-    <tr>
-      <td>Post 1</td>
-      <td>10:00 pm</td>
-      <td>256</td>
-      <td>N/A</td>
-    </tr>
-  )
+function Post({ title, score, commentsCount, createdUTC }) {
+    const dateTimeInSeconds = new Date(createdUTC * 1000);
+
+    return (
+        <tr>
+            <td>{title}</td>
+            <td>{dateTimeInSeconds.toLocaleDateString()} <br /> {dateTimeInSeconds.toLocaleTimeString()}</td>
+            <td>{score}</td>
+            <td>{commentsCount}</td>
+        </tr>
+    )
 }
 
 export default Post;

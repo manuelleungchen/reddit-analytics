@@ -37,6 +37,32 @@
     padding: 5px;
   }
 
+  .alert {
+    padding: 10px;
+    background-color: #ffc107;
+    color: white;
+    border-bottom: 2em;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+
+  .hiddenAlert {
+      display: none;
+  }
+
   /* landscape phones styles */
 @media screen and (min-width: 576px) {
     .searchbar {
