@@ -4,6 +4,46 @@
     padding: 1em;
     border: 2px solid #f97924;
     border-radius: 1.5em;
+    text-align: center;
+}
+
+.postslist h3 {
+    border-bottom: 2px dotted #f97924;
+    padding-bottom: 0.5em;
+}
+
+.postslist table {
+    text-align: center;
+    width: 100%;
+}
+
+th {
+    padding: 0.3em;
+}
+
+td {
+    max-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0.5em;
+}
+
+.tableHeaderTitle {
+
+    width: 50%;
+}
+
+.tableHeaderCreated {
+    width: 30%;
+}
+
+.tableHeaderScore {
+    width: 10%;
+}
+
+.tableHeaderComments {
+    width: 10%;
 }
 
 /* landscape phones styles */
