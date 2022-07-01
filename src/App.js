@@ -13,7 +13,6 @@ function App() {
 
     return (
         <QueryClientProvider client={queryClient}>
-            <div>
                 <Header />
                 <main className={styles.container}>
                     <SearchSection />
@@ -33,7 +32,6 @@ function App() {
                     </section>
                 </main>
                 <Footer />
-            </div>
         </QueryClientProvider>
     );
 }

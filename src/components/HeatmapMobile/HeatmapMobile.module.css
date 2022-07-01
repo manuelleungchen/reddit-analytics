@@ -1,9 +1,9 @@
 .heatmap {
-    margin: 2em 0;
+    margin: 1em 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .table {
@@ -16,7 +16,7 @@
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
     color: whitesmoke;
-    width: 7%;
+    width: 12%;
 }
 
 .table tbody th {
@@ -25,7 +25,7 @@
 }
 
 .table tbody td {
-    border: 0.5px solid #ddd;
+    border: 1px solid #ddd;
     max-width: 0; 
     overflow: hidden;
     text-overflow: ellipsis;
@@ -46,7 +46,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 
 .legend svg {
@@ -58,16 +57,31 @@
     margin: 0 0.5em;
 }
 
-/* laptops styles */
-@media screen and (min-width: 920px) {
+/* Hide br tags on table headers when device width reach 1252 px */
+@media screen and (min-width: 450px) {
     .linebreak {
         display: none;
     }
-}
 
-/* large devices styles */
-@media screen and (min-width: 1200px) {
     .heatmap {
         font-size: 1.1em;
+    }
+}
+
+/* landscape phones styles */
+@media screen and (min-width: 576px) {
+    .heatmap {
+        font-size: 1.2em;
+    }
+}
+
+/* portrait tablets styles */
+@media screen and (min-width: 768px) {
+    .searchbar {
+        width: 60%;
+    }
+
+    .heatmap {
+        font-size: 1.3em;
     }
 }
