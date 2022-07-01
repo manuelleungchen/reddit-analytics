@@ -11,14 +11,14 @@ function Postslist({ data }) {
             <table>
                 <thead>
                     <tr>
-                        <th scope='col' className={styles.tableHeaderTitle} >Title</th>
-                        <th scope='col' className={styles.tableHeaderCreated}>Time Posted</th>
-                        <th scope='col' className={styles.tableHeaderScore}>Score</th>
-                        <th scope='col' className={styles.tableHeaderComments}>Comments</th>
+                        <th className={styles.thead} scope='col' id={styles.tableHeaderTitle} >Title</th>
+                        <th className={styles.thead} scope='col' id={styles.tableHeaderCreated}>Time Posted</th>
+                        <th className={styles.thead} scope='col' id={styles.tableHeaderScore}>Score</th>
+                        <th className={styles.thead} scope='col' id={styles.tableHeaderComments}>Comments</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {data.data.children.slice(0, 5).map((post, index) => <Post key={index} title={post.data.title} score={post.data.score} commentsCount={post.data.num_comments} created={post.data.created} createdUTC={post.data.created_utc} />)}
+                    {data.data.children.slice(0, 5).map((post, index) => <Post key={index} title={post.data.title} score={post.data.score} commentsCount={post.data.num_comments} created={post.data.created} />)}
                 </tbody>
             </table>
         </section>

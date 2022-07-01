@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Heatmap from '../Heatmap/Heatmap';
+import HeatmapMobile from '../HeatmapMobile/Heatmap';
 import Postslist from '../Postslist/Postslist';
-import styles from './SearchSection.module.css'
-
+import styles from './SearchSection.module.css';
+import useWindowDimensions from '../useWindowDimensions';
 import { useQuery } from 'react-query';
 
 function SearchSection() {
@@ -11,7 +12,7 @@ function SearchSection() {
     const [alertBox, setAlertBox] = useState(false);
 
     const fetchTopPosts = async () => {
-        const res = await fetch(`https://www.reddit.com/r/${subredditSearch}/top.json`);
+        const res = await fetch(`https://www.reddit.com/r/${subredditSearch}/top.json?limit=100&t=all`);
         return res.json();
     }
 
@@ -42,6 +43,7 @@ function SearchSection() {
     const toggleAlert = () => {
         setAlertBox(false);
     }
+    const deviceSize = useWindowDimensions();
 
     return (
         <section id='search'>
@@ -68,10 +70,12 @@ function SearchSection() {
                     <p><strong>Danger!</strong> The subreddit &ldquo;{subredditSearch}&rdquo; doesnt exist. Please try another subreddit.</p>
                 </div>
             ) : (
-                <>
+                <>                    
+                    {/* If device width is greater than 920 px, show desktop version of heatmap. Otherwise show mobile heatmap */}
+                    {deviceSize.width > 920 ? <Heatmap data={data} /> : <HeatmapMobile data={data} />}
+
+                    {/* Pass the day of the week and time of day from the top posts */}
                     <Postslist data={data} />
-                    {/* <Heatmap /> */}
-                    <div>{isFetching ? 'Fetching...' : null}</div>
                 </>
             )}
 
