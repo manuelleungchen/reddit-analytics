@@ -4,4 +4,29 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     padding: 0.5em;
+    color: #f97924;
+}
+
+td > a {
+    color: #f97924;
+    text-decoration: none;
+    border-bottom: 1px dotted #f97924;
+    font-weight: 600;
+
+}
+
+td > a:hover, td > a:focus {
+    border: none;
+    text-decoration: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }

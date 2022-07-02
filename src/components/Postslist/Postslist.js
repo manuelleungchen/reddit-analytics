@@ -18,7 +18,7 @@ function Postslist({ data }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {data.data.children.slice(0, 5).map((post, index) => <Post key={index} title={post.data.title} score={post.data.score} commentsCount={post.data.num_comments} created={post.data.created} />)}
+                    {data.data.children.slice(0, 5).map((post, index) => <Post key={index} title={post.data.title} score={post.data.score} commentsCount={post.data.num_comments} created={post.data.created} link={post.data.permalink} />)}
                 </tbody>
             </table>
         </section>
