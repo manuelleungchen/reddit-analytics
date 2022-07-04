@@ -30,16 +30,19 @@ function Heatmap({ data }) {
         const maxPostCount = getMaxPostCount(heatmapMatrix);
 
         if (numOfPosts < maxPostCount/4) {
-            result = "rgb(252, 177, 3)";
+            result = "#ffcc00";
         }
         else if (numOfPosts >= maxPostCount/4 && numOfPosts < maxPostCount/2) {
-            result = "rgb(252, 136, 3)";
+            result = "#A5C686";
         }
-        else if (numOfPosts >= maxPostCount/2 && numOfPosts < maxPostCount/(3/4)) {
-            result = "rgb(252, 74, 3)";
+        else if (numOfPosts >= maxPostCount/2 && numOfPosts < maxPostCount/(4/3)) {
+            result = "#428566";
         }
-        else if (numOfPosts >= maxPostCount/(3/4)) {
-            result = "rgb(252, 3, 3)";
+        else if (numOfPosts >= maxPostCount/(4/3) && numOfPosts < maxPostCount) {
+            result = "#365C5E";
+        }
+        else if (numOfPosts === maxPostCount) {
+            result = "#103C5B";
         }
         return result;
     };
@@ -167,10 +170,11 @@ function Heatmap({ data }) {
             </table>
             <div className={styles.legend}>
                 <span>least popular</span>
-                <svg height="20" width="20"><circle cx="10" cy="10" r="10" strokeWidth="2" fill="rgb(252, 177, 3)" /></svg>
-                <svg height="20" width="20"><circle cx="10" cy="10" r="10" strokeWidth="2" fill="rgb(252, 136, 3)" /></svg>
-                <svg height="20" width="20"><circle cx="10" cy="10" r="10" strokeWidth="2" fill="rgb(252, 74, 3)" /></svg>
-                <svg height="20" width="20"><circle cx="10" cy="10" r="10" strokeWidth="2" fill="rgb(252, 3, 3)" /></svg>
+                <svg height="20" width="20"><circle cx="10" cy="10" r="10" strokeWidth="2" fill="#ffcc00" /></svg>
+                <svg height="20" width="20"><circle cx="10" cy="10" r="10" strokeWidth="2" fill="#A5C686" /></svg>
+                <svg height="20" width="20"><circle cx="10" cy="10" r="10" strokeWidth="2" fill="#428566" /></svg>
+                <svg height="20" width="20"><circle cx="10" cy="10" r="10" strokeWidth="2" fill="#365C5E" /></svg>
+                <svg height="20" width="20"><circle cx="10" cy="10" r="10" strokeWidth="2" fill="#103C5B" /></svg>
                 <span>most popular</span>
             </div>
             <span>All time are shown in your timezone</span>

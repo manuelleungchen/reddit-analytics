@@ -1,50 +1,57 @@
 .searchbar {
-    background-color: #f97924;
     width: 85%;
-    height: 44px;
-    border-radius: 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 1em auto;
-  }
+}
 
-  .searchbar input {
+.searchbar span {
+    margin: 10px;
+}
+
+.searchbar input {
     all: unset;
     font: 16px system-ui;
-    color: #fff;
+    color: black;
+    background-color: white;
     height: 100%;
     width: 100%;
-    padding: 6px 10px;
-  }
+    padding: 10px;
+    border-radius: 5px;
+}
 
-  ::placeholder {
-    color: whitesmoke;
-  }
+::placeholder {
+    color: black;
+}
 
-  .button {
+.button {
     all: unset;
     cursor: pointer;
-    width: 44px;
-    height: 44px;
-  }
-  
-  .button svg {
-    color: #fff;
-    fill: currentColor;
-    width: 34px;
-    height: 34px;
-    padding: 5px;
-  }
+    width: 38px;
+    height: 38px;
+    color: white;
+    background-color: #8A3700;
+    border-radius: 5px;
+    margin: 5px 10px;
+}
 
-  .alert {
+.button svg {
+    color: white;
+    fill: currentColor;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+
+.alert {
     padding: 10px;
     background-color: #ffc107;
     color: white;
     border-bottom: 2em;
-  }
-  
-  .closebtn {
+}
+
+.closebtn {
     margin-left: 15px;
     color: white;
     font-weight: bold;
@@ -53,17 +60,17 @@
     line-height: 20px;
     cursor: pointer;
     transition: 0.3s;
-  }
-  
-  .closebtn:hover {
+}
+
+.closebtn:hover {
     color: black;
-  }
+}
 
-  .hiddenAlert {
-      display: none;
-  }
+.hiddenAlert {
+    display: none;
+}
 
-  /* landscape phones styles */
+/* landscape phones styles */
 @media screen and (min-width: 576px) {
     .searchbar {
         width: 70%;
