@@ -1,6 +1,6 @@
 .footer {
-    background-color: #ffc299;
-    color: #ff8737;
+    background-color: #FFF3EB;
+    color: #8A3700;
     text-align: center;
     padding: 0.5em;
     font-size: large;
@@ -15,7 +15,7 @@
 }
 
 .footer ul a {
-    color: #ff8737;
+    color: #8A3700;
     font-size: 35px;
 }
 

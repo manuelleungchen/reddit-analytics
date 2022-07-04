@@ -2,9 +2,10 @@
     width: 96%;
     margin: 1em auto;
     padding: 1em;
-    border: 2px solid #f97924;
+    border: 2px solid #8A3700;
     border-radius: 1.5em;
     text-align: center;
+    color: #8A3700;
 }
 
 .postslist h3 {
