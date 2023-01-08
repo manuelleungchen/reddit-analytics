@@ -7,15 +7,21 @@ function Heatmap({ data }) {
     const [heatmapMatrix, setHeatmapMatrix] = useState(Array.from({ length: 7 }, () => Array.from({ length: 24 }, () => 0)))
 
     useEffect(() => {
-        data.data.children.map((post) => {
+        // Make a copy of the matrix
+        let matrixCopy = Array.from({ length: 7 }, () => Array.from({ length: 24 }, () => 0));
+        
+        // Loop through each post
+        data.data.children.forEach((post) => {
+            // Get the day and hour of the post
             const dateTimeInSeconds = new Date(post.data.created * 1000);
             const day = dateTimeInSeconds.getDay();
             const hour = dateTimeInSeconds.getHours();
-    
-            const matrixCopy = [...heatmapMatrix];
+            // Increament the matrix value on the corresponding day/hour
             matrixCopy[day][hour] += 1;
-            setHeatmapMatrix(matrixCopy);
         })
+        // Update heatmapMatrix state
+        setHeatmapMatrix(matrixCopy);
+
     }, [data])
 
     const getMaxPostCount = (array) => {

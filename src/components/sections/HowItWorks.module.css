@@ -1,0 +1,14 @@
+.section {
+    width: 96%;
+    margin: 1em auto;
+    padding: 1em;
+    border: 2px solid #8A3700;
+    border-radius: 1.5em;
+}
+
+.section ul {
+    margin-left: 25px;
+    line-height: 2;
+
+}
+

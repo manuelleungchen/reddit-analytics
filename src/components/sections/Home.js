@@ -2,24 +2,33 @@ import React, { useState } from 'react';
 import Heatmap from '../Heatmap/Heatmap';
 import HeatmapMobile from '../HeatmapMobile/Heatmap';
 import Postslist from '../Postslist/Postslist';
-import styles from './SearchSection.module.css';
+import styles from './Home.module.css';
 import useWindowDimensions from '../useWindowDimensions';
 import { useQuery } from 'react-query';
 
 function SearchSection() {
-    const [subredditSearch, setSubredditSearch] = useState("");
+    const [subredditSearch, setSubredditSearch] = useState("");  // Store the current subreddit in the searchbar
+    const [lastSearch, setLastSearch] = useState("");    // Store last subreddit searched
+
 
     const [alertBox, setAlertBox] = useState(false);
 
     const fetchTopPosts = async () => {
+        // Fetch the top posts (MAX 100) on selected subreddit
         const res = await fetch(`https://www.reddit.com/r/${subredditSearch}/top.json?limit=100&t=all`);
+        console.log("fetching data")
         return res.json();
     }
 
-    const { isIdle, isLoading, isError, data, refetch, isFetching } = useQuery('posts', fetchTopPosts,
+    const { isIdle, isLoading, isError, error, data, refetch, isFetching } = useQuery('posts', fetchTopPosts,
         {
             enabled: false
-        }
+        }, 
+        {
+            // ⚠️ looks good, but is maybe _not_ what you want
+            onError: (error) =>
+              console.log(`Something went wrong: ${error.message}`),
+          }
     );
 
     const handleInputChange = event => {
@@ -34,8 +43,11 @@ function SearchSection() {
         if (subredditSearch.length < 3) {
             setAlertBox(true);
         }
-        else {
+
+        // Only refetch data when subreddit name is 3 or more characters long and wasnt use lastly
+        else if ((subredditSearch.length >= 3) && (subredditSearch !== lastSearch)) {
             setAlertBox(false);
+            setLastSearch(subredditSearch)
             refetch();
         }
     };
@@ -75,6 +87,7 @@ function SearchSection() {
                 <>
                     {/* If device width is greater than 920 px, show desktop version of heatmap. Otherwise show mobile heatmap */}
                     {deviceSize.width > 920 ? <Heatmap data={data} /> : <HeatmapMobile data={data} />}
+                    {/* <HeatmapMobile data={data} /> */}
 
                     {/* Pass the day of the week and time of day from the top posts */}
                     <Postslist data={data} />

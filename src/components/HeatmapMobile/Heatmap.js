@@ -3,19 +3,25 @@ import styles from './HeatmapMobile.module.css';
 
 function Heatmap({ data }) {
 
-    // Create a state with a matrix of 24 by 7 with 24 rows representing the time and 7 cols representing the days of week. 
-    const [heatmapMatrix, setHeatmapMatrix] = useState(Array.from({ length: 24 }, () => Array.from({ length: 7 }, () => 0)))
+    // Create a state with a matrix of 24 by 7 with 24 rows representing the time and 7 cols representing the days of week.
+    const [heatmapMatrix, setHeatmapMatrix] = useState(Array.from({ length: 24 }, () => Array.from({ length: 7 }, () => 0)));
 
     useEffect(() => {
-        data.data.children.map((post) => {
+        // Make a copy of the matrix
+        let matrixCopy = Array.from({ length: 24 }, () => Array.from({ length: 7 }, () => 0));
+
+        // Loop through each post
+        data.data.children.forEach((post) => {
+            // Get the day and hour of the post
             const dateTimeInSeconds = new Date(post.data.created * 1000);
             const day = dateTimeInSeconds.getDay();
             const hour = dateTimeInSeconds.getHours();
-    
-            const matrixCopy = [...heatmapMatrix];
+            // Increament the matrix value on the corresponding hour/day
             matrixCopy[hour][day] += 1;
-            setHeatmapMatrix(matrixCopy);
         })
+        // Update heatmapMatrix state
+        setHeatmapMatrix(matrixCopy);
+
     }, [data])
 
     const getMaxPostCount = (array) => {
