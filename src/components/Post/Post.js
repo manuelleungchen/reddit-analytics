@@ -1,16 +1,29 @@
 import React from 'react';
 import styles from './Post.module.css';
 
-function Post({ title, score, commentsCount, created, link }) {
+function Post({ title, score, commentsCount, created, link, deviceSize }) {
     const dateTimeInSeconds = new Date(created * 1000);
 
     return (
-        <tr>
-            <td className={styles.tbody}><a href={`https://www.reddit.com${link}`} target="_blank" >{title}<span className="sr-only">(Open in new window)</span></a></td>
-            <td className={styles.tbody}>{dateTimeInSeconds.toLocaleDateString()} <br /> {dateTimeInSeconds.toLocaleTimeString()}</td>
-            <td className={styles.tbody}>{score}</td>
-            <td className={styles.tbody}>{commentsCount}</td>
-        </tr>
+        <>
+            {deviceSize.width > 920 ?
+            <tr>
+                <td><a className={styles.postLink} href={`https://www.reddit.com${link}`} target="_blank" >{title}<span className="sr-only">(Open in new window)</span></a></td>
+                <td> {dateTimeInSeconds.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric'})} <br /> {dateTimeInSeconds.toLocaleTimeString(undefined, { hour: 'numeric', minute: 'numeric'})}</td>
+                <td>{score}</td>
+                <td>{commentsCount}</td>
+            </tr>
+            :
+                <div className={styles.post}>
+                    <a className={styles.postLink} href={`https://www.reddit.com${link}`} target="_blank">{title}</a>
+                    <div className={styles.postDetails}>
+                        <span>{dateTimeInSeconds.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })} {dateTimeInSeconds.toLocaleTimeString(undefined, { hour: 'numeric', minute: 'numeric' })}</span>
+                        <span>{score} votes</span>
+                        <span>{commentsCount} comments</span>
+                    </div>
+                </div>
+            }
+        </>
     )
 }
 

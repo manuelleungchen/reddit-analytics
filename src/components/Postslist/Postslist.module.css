@@ -9,7 +9,7 @@
 }
 
 .postslist h3 {
-    border-bottom: 2px dotted #f97924;
+    border-bottom: 3px solid #8A3700;
     padding-bottom: 0.5em;
 }
 
@@ -49,13 +49,6 @@
 /* laptops styles */
 @media screen and (min-width: 920px) {
     .postslist {
-        width: 80%;
-    }
-}
-
-/* large devices styles */
-@media screen and (min-width: 1200px) {
-    .postslist {
-        width: 70%;
+        width: 95%;
     }
 }

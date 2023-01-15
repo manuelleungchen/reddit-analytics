@@ -43,3 +43,9 @@
 .navigationLinks li a:hover {
     border-bottom: 2px solid #ff8737;
 }
+
+.navigationLinks a:focus,
+.brandName:focus {
+    outline: #ffc107 solid 2px;
+    outline-offset: 3px;
+}

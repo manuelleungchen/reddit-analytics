@@ -23,6 +23,11 @@
     font-size: 35px;
 }
 
+.footer ul a:focus {
+    outline: #ffc107 solid 2px;
+    outline-offset: 3px;
+}
+
 .srOnly {
     position: absolute;
     width: 1px;

@@ -1,20 +1,31 @@
-.tbody {
-    max-width: 0;
+.post {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #8A3700;
+    padding: 0.2em;
+}
+
+.postLink {
+    text-decoration: none;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    padding: 0.5em;
-    color: black;
+    margin: 0.5em;
+    color: #f97924;
 }
 
-td > a {
-    color: #8A3700;
-    text-decoration: none;
-    border-bottom: 1px dotted #f97924;
-    font-weight: 600;
+.postLink:hover {
+    text-decoration-line: underline;
+    text-decoration-color: #ffc107;
 }
 
-td > a:hover, td > a:focus {
-    border: none;
+.postLink:focus {
     text-decoration: none;
+    border-bottom: 2px solid #ffc107;
+    outline: 2px solid #ffc107;
+}
+
+.postDetails {
+    display: flex;
+    justify-content: space-between;
 }
