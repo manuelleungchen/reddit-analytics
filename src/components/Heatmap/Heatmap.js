@@ -119,7 +119,6 @@ function Heatmap({ data }) {
                 <svg height="20" width="20"><circle cx="10" cy="10" r="10" strokeWidth="2" fill="#103C5B" /></svg>
                 <span>most popular</span>
             </div>
-            <span>All time are shown in your timezone: Toronto - Canada</span>
         </div>
     )
 }
