@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Reddit Analytics App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![License](https://img.shields.io/badge/License%3A-mit-darkgreen.svg)
 
-## Available Scripts
+## Description  
+React application for searching and analyzing the top 100 posts in a subreddit. The app illustrates the ideal date and time of the week to create a post in a heatmap. This analytic information is useful to improve the chances of posts being liked more.
 
-In the project directory, you can run:
 
-### `npm start`
+![Screenshot](./src/assets/images/reddit-analytics.png)
+    
+## Table of Contents   
+* [User Story](#User-Story)
+* [Acceptance Criteria](#Acceptance-Criteria)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Credits](#Credits)
+* [License](#License)
+* [Questions](#Questions)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## User Story
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* As a user, I want to be able to search subreddits and obtain information of the best period of the week to create a post. 
 
-### `npm test`
+## Acceptance Criteria
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+GIVEN a Reddit Analytics Application
+WHEN I open the Reddit Analytics App
+THEN I am presented with a welcome page with a searchbar
+WHEN I enter the title of a subreddit and click on the search button
+THEN I am presented with a heatmap graph and a list of top 5 posts
+WHEN I click on a post link
+THEN a new tab linked to the selected post opens up
+```
 
-### `npm run build`
+## Installation
+1. Clone the repo.
+2. Navigate to the project directory.
+3. Run command ```npm install``` to install any dependencies.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage    
+* Navigate to [Reddit Analytics Site](https://reddit-analytics.onrender.com).
+* Enter the name of a subreddit on the searchbar.
+* Click on the search button.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Credits
+Developed by: 
+Manuel Leung Chen ([GitHub](https://github.com/manuelleungchen))
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Tools used to Develop this MERN stack application: 
 
-### `npm run eject`
+* [React.js](https://reactjs.org/)
+* [Node.js](https://nodejs.org/en/)
+* [Reddit API](https://www.reddit.com/dev/api/)
+* [Render](https://render.com/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
+Copyright (c) 2020 - Manuel Leung Chen
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
+ 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Questions
+Manuel Leung Chen - [GitHub](https://github.com/manuelleungchen )
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+If you have any question about this application, please reach out me by [Email](manuel.leungchen@gmail.com)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
